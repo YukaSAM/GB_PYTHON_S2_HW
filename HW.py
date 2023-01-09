@@ -48,6 +48,16 @@
 #   *Пример:*
 #       - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
+# lenght_list = 5
+# my_list = [1.1, 1.2, 3.1, 5, 10.01]
+# my_tail_list = [round(my_list[i])-int(my_list[i], 2) for i in range(lenght_list) if my_list[i] % 1 !=0]
+# print(f'{my_tail_list} -> {max(my_tail_list - min (my_tail_list))}')
+
+lenght_list = 5
+
+my_list = [1.1, 1.2, 3.1, 5, 10.01]
+my_tail_list = [round(my_list[i]-int(my_list[i]),2) for i in range(lenght_list) if i % 1 != 0] 
+print(f'{my_list} -> {max(my_tail_list) - min(my_tail_list)}')
 
 # 4 Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
