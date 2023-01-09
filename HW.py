@@ -2,34 +2,53 @@
 # которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 #   Пример:
 #       - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
-# 1 способ - через генераторы и циклы
-import random
+# способ через генераторы и циклы
+# import random
 
-def sum_odd_elem_inlist(def_list):
-    sum = 0
-    for i in range(len(def_list)):
-        if i % 2 !=0:
-            sum += def_list[i]
-    return sum
+# def sum_odd_elem_inlist(def_list):
+#     sum = 0
+#     for i in range(len(def_list)):
+#         if i % 2 !=0:
+#             sum += def_list[i]
+#     return sum
 
-lenght_list = 10
-my_list = [random.randint(0,10) for i in range(lenght_list)]
-my_odd_list = [my_list[i] for i in range(lenght_list) if i % 2 !=0]
-print(f'{my_list} -> на нечётных позициях элементы {my_odd_list}ответ: {sum_odd_elem_inlist(my_list)}')
+# lenght_list = 10
+# my_list = [random.randint(0,10) for i in range(lenght_list)]
+# my_odd_list = [my_list[i] for i in range(lenght_list) if i % 2 !=0]
+# print(f'{my_list} -> на нечётных позициях элементы {my_odd_list}ответ: {sum_odd_elem_inlist(my_list)}')
 
-# 2 способ 
 
-# 2 Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+# 2 Напишите программу, которая найдёт произведение пар чисел списка. 
+# Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+#   *Пример:*
+#       - [2, 3, 4, 5, 6] => [12, 15, 16];
+#       - [2, 3, 5, 6] => [12, 15]
 
-# *Пример:*
+# from math import ceil
 
-# - [2, 3, 4, 5, 6] => [12, 15, 16];
-# - [2, 3, 5, 6] => [12, 15]
-# 3 Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+# def sum_of_pare(array):
 
-# *Пример:*
+# # get list of integer digits and return new list with
+# # multiplication of elements with elements that has negative some indexes
+# # :param array: list
+# # :return: new list
 
-# - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+# accumulator = []
+# for i in range(ceil(len(array) / 2)):
+#     accumulator.append(array[i] * array[-(i + 1)])
+# return accumulator
+
+
+# print(sum_of_pare([2, 3, 4, 5, 6]))
+# print(sum_of_pare([2, 3, 5, 6]))
+
+
+# 3 Задайте список из вещественных чисел. Напишите программу, 
+# которая найдёт разницу между максимальным и минимальным значением дробной части элементов.
+#   *Пример:*
+#       - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+
+
 # 4 Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
 # *Пример:*
